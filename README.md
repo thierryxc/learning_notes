@@ -19,10 +19,8 @@
 3. Run Pandoc inside the `output/` directory with `--extract-media` so images land in `output/media`, `--embed-resources` for base64 inlining, the Lua filter, and the before/after fragments.
 4. Post-process the generated HTML via Python:
 	- Inline the copied CSS (replacing the `<link>` tag when present, otherwise appending to `<head>`).
-	- Ensure the `<style>img{max-width:100%;height:auto;}</style>` block exists once inside the document.
 5. For `.pdf` targets, call headless Chrome (with `--print-to-pdf-no-header --no-pdf-header-footer`) to “print” the generated HTML into a PDF file, reusing the same Chrome binary referenced by `PUPPETEER_EXECUTABLE_PATH`.
-6. Word (`.docx` / `.doc`) exports are no longer supported; the script exits with an error if requested.
-7. Open the resulting artifact via the default system handler (`open`).
+6. Open the generated file with the system's default application.
 
 ### Usage
 ```sh
@@ -39,6 +37,8 @@ Arguments:
 - Ensure the `output/` directory is writable; it is automatically created along with any parent directories for the HTML file.
 - If Pandoc cannot find `diagram.lua` or the CSS fragments, verify the `render/` folder matches the expected layout.
 - Re-running the script on the same HTML is idempotent: the Python block replaces the previous inline CSS segment rather than duplicating it.
+- To output different formats (e.g., `.pdf`, `.html`, `.docx`), simply specify the desired file extension in the second argument—the script will automatically detect the output format and invoke the appropriate converter.
+- For PDF generation, the script uses Chrome in headless mode to render the HTML into a high-fidelity PDF document, preserving all styles and embedded diagrams.
 
 ## render.sh 指南（简体中文）
 
@@ -61,10 +61,8 @@ Arguments:
 3. 在 `output/` 目录内调用 Pandoc：开启 `--extract-media`、`--embed-resources`、加载 Lua filter，并注入 before/after 片段。
 4. 使用 Python 做后处理：
 	- 将复制过来的 CSS 内联到 HTML 头部（若存在 `<link>` 则替换，没有就追加）。
-	- 确保文档中只存在一次 `<style>img{max-width:100%;height:auto;}</style>` 以限制图片宽度。
 5. 当目标扩展名为 `.pdf` 时，调用 Chrome headless 将上述 HTML “打印”成 PDF（附带 `--print-to-pdf-no-header --no-pdf-header-footer`，移除页眉/页脚）。
-6. Word（`.docx`/`.doc`）导出功能现已移除，如请求该格式脚本会直接报错退出。
-7. 最后通过 macOS `open` 命令打开生成的文件。
+6. 使用系统默认应用程序打开生成的文件。
 
 ### 用法示例
 ```sh
@@ -81,3 +79,5 @@ Arguments:
 - 需要确保 `output/` 可写，脚本会自动创建该目录以及输出文件所在的父目录。
 - 若 Pandoc 找不到 `diagram.lua` 或 CSS 片段，请检查 `render/` 目录结构是否完整。
 - 重复运行同一输入是幂等的：Python 会替换已有的 CSS 内联段，避免累积重复内容。
+- 如需输出不同格式（如 `.pdf`、`.html`、`.docx` 等），只需在第二个参数中指定相应的文件扩展名，脚本会自动识别输出格式并调用相应的转换器。
+- 生成 PDF 时，脚本使用 Chrome 将 HTML 渲染为高保真的 PDF 文档，完整保留所有样式和嵌入的图表。
