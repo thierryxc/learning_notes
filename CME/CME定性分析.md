@@ -356,6 +356,70 @@
 - CME Group Inc. DEF 14A（Filed 2025-03-20）Ownership of CME Group Common Stock — Shareholders Owning More Than Five Percent（Vanguard/BlackRock 持股与比例；record date 与分母口径）；Ownership of CME Group Common Stock — Directors, and Executive Officers as a Group（董事与高管合计持股与比例；Class B 分拆在外流通股数口径）。
 
 ---
+
+## 股东回报
+
+### 结论要点
+
+- **回报框架以“季度常规股息 + 年度可变股息（annual variable dividend）+（近年新增）回购授权”为主**：公司披露拟持续支付季度常规股息，并给出目标区间；同时在年末视经营结果与资本需求决定当期年度可变股息水平。
+- **季度股息目标口径（公司披露）**：公司披露季度股息目标为“上一年度 cash earnings 的 50%–60%”（最终由董事会酌情决定，受盈利、财务状况、资本需求、债务水平及公司法限制等因素影响）。
+- **FY2024 年末股东回报动作更偏“加大弹性工具”**：董事会于 2024 年 12 月批准最多 30 亿美元的 Class A 回购计划（FY2024 年末尚未执行）；并宣布 FY2024 对应的年度可变股息为 5.80 美元/股（2025 年 1 月支付）。
+- **最新 10-Q 披露的回购执行与注销口径**：截至 2025-09-30，该 30 亿美元回购计划项下累计回购 32,265 股、金额 820 万美元、平均价 253.05 美元/股，剩余额度 2,991.8 百万美元；公司披露回购股份注销（retired）而非库存股持有。
+
+### 详细情况
+
+#### 过去5年股东回报历史
+- FY2025
+  - 股息动作（截至 2025-09-30 的 9M2025 披露）：9M2025 支付季度常规股息合计 3.75 美元/股（3Q25 单季为 1.25 美元/股）。
+  - 回购动作（截至 2025-09-30 的 9M2025 披露）：回购 32,265 股、金额 820 万美元、平均价 253.05 美元/股；剩余额度 2,991.8 百万美元；回购股份注销。
+
+- FY2024
+  - 年度可变股息（annual variable dividend）：董事会于 2024-12-05 宣布 5.80 美元/股，2025-01-16 支付（record date：2024-12-27）。
+  - 季度常规股息（FY2024 年内，10-Q 口径）：1Q24/2Q24/3Q24 每股现金股息均为 1.15 美元/股。
+  - 回购：董事会于 2024-12 批准最多 30 亿美元的 Class A 回购计划；截至 2024-12-31 尚未在该计划下回购。
+
+- FY2023
+  - 年度可变股息（annual variable dividend）：董事会于 2023-12-07 宣布 5.25 美元/股，2024-01-18 支付（record date：2023-12-28）。
+  - 季度常规股息（FY2023 年内，10-Q 口径）：1Q23/2Q23/3Q23 每股现金股息均为 1.10 美元/股。
+  - 回购：未在 FY2023 10-K 的“Share Repurchase Program”段落中见到与 FY2024 类似的新增回购授权披露（Item 5 仍披露 issuer purchases 表格口径）。
+
+- FY2022
+  - 年度可变股息（annual variable dividend）：董事会于 2022-12-08 宣布 4.50 美元/股，2023-01-18 支付（record date：2022-12-28）。
+  - 季度常规股息（FY2022 年内，10-Q 口径）：1Q22/2Q22/3Q22 每股现金股息均为 1.00 美元/股。
+  - 回购：未在 FY2022 10-K 的 Item 5 中见到与 FY2024 类似的新增回购授权披露。
+
+- FY2021
+  - 年度可变股息（annual variable dividend）：董事会于 2021-12-09 宣布 3.25 美元/股，2022-01-14 支付（record date：2021-12-28）。
+  - 季度常规股息（FY2021 年内，10-Q 口径）：1Q21/2Q21/3Q21 每股现金股息均为 0.90 美元/股。
+  - 回购：未在 FY2021 10-K 的 Item 5 中见到与 FY2024 类似的新增回购授权披露。
+
+- FY2020
+  - 年度可变股息（annual variable dividend）：董事会于 2020-12-10 宣布 2.50 美元/股，2021-01-13 支付（record date：2020-12-28）。
+  - 季度常规股息（FY2020 年内，10-Q 口径）：1Q20/2Q20/3Q20 每股现金股息均为 0.85 美元/股。
+  - 回购：未在 FY2020 10-K 的 Item 5 中见到与 FY2024 类似的新增回购授权披露。
+
+#### 最新股东回报政策
+
+- **季度常规股息政策（公司披露口径）**：公司披露拟持续支付季度常规股息，目标为上一年度 cash earnings 的 50%–60%；股息是否支付及金额由董事会酌情决定。
+- **年度可变股息机制（公司披露口径）**：公司披露年度可变股息通常在年末确定，水平随年度经营结果、资本开支、潜在并购与其他资本回报方式（含常规股息与回购）等因素变化。
+- **回购政策（最新披露）**：2024-12 董事会批准最多 30 亿美元回购授权；截至 2025-09-30 已开始执行且披露剩余额度；回购股份注销。
+
+### 证据与出处
+
+- CME Group Inc. Form 10-K（FY2024，Filed 2025-02-27）Item 5（季度股息目标区间与董事会裁量因素；2024-12 回购授权 30 亿美元及 FY2024 年末未执行；年度可变股息 5.80 美元/股的声明与支付安排；2025-02-06 季度股息声明）。
+- CME Group Inc. Form 10-K（FY2023，Filed 2024-02-28）Item 5（年度可变股息 5.25 美元/股的声明与支付安排；2024-02-08 季度股息声明；季度股息目标区间披露）。
+- CME Group Inc. Form 10-K（FY2022，Filed 2023-02-27）Item 5（年度可变股息 4.50 美元/股的声明与支付安排；2023-02-02 季度股息声明；季度股息目标区间披露）。
+- CME Group Inc. Form 10-K（FY2021，Filed 2022-02-25）Item 5（年度可变股息 3.25 美元/股的声明与支付安排；2022-02-03 季度股息声明）。
+- CME Group Inc. Form 10-K（FY2020，Filed 2021-02-26）Item 5（年度可变股息 2.50 美元/股的声明与支付安排；2021-02-03 季度股息声明）。
+- CME Group Inc. Form 10-Q（Quarter ended 2025-09-30，Filed 2025-10-24）Item 1. Financial Statements（9M2025 dividends per share cash paid、Payments of dividends；回购执行数量/金额/均价/剩余额度；“shares are retired”口径）。
+- CME Group Inc. Form 10-Q（1Q20/2Q20/3Q20，Report ended 2020-03-31/06-30/09-30）Item 1. Financial Statements（当季每股现金股息：0.85 美元/股）。
+- CME Group Inc. Form 10-Q（1Q21/2Q21/3Q21，Report ended 2021-03-31/06-30/09-30）Item 1. Financial Statements（当季每股现金股息：0.90 美元/股）。
+- CME Group Inc. Form 10-Q（1Q22/2Q22/3Q22，Report ended 2022-03-31/06-30/09-30）Item 1. Financial Statements（当季每股现金股息：1.00 美元/股）。
+- CME Group Inc. Form 10-Q（1Q23/2Q23/3Q23，Report ended 2023-03-31/06-30/09-30）Item 1. Financial Statements（当季每股现金股息：1.10 美元/股）。
+- CME Group Inc. Form 10-Q（1Q24/2Q24/3Q24，Report ended 2024-03-31/06-30/09-30）Item 1. Financial Statements（当季每股现金股息：1.15 美元/股）。
+
+---
+
 ## 产品与服务
 
 ### 结论要点
@@ -1363,8 +1427,26 @@
 - CME Group Inc. Form 10-K（FY2015，Filed 2016-02-11）
 - CME Group Inc. Form 10-K（FY2016，Filed 2017-02-23）
 - CME Group Inc. Form 10-K（FY2017，Filed 2018-02-22）
+- CME Group Inc. Form 10-K（FY2020，Filed 2021-02-26；Accession No. 0001156375-21-000020）
+- CME Group Inc. Form 10-K（FY2021，Filed 2022-02-25；Accession No. 0001156375-22-000076）
 - CME Group Inc. Form 10-K（FY2022，Filed 2023-02-27）
+- CME Group Inc. Form 10-K（FY2023，Filed 2024-02-28；Accession No. 0001156375-24-000010）
 - CME Group Inc. Form 10-K（FY2024，Filed 2025-02-27；Accession No. 0001156375-25-000021）
+- CME Group Inc. Form 10-Q（Quarter ended 2020-03-31，Filed 2020-05-06；Accession No. 0001156375-20-000039）
+- CME Group Inc. Form 10-Q（Quarter ended 2020-06-30，Filed 2020-08-05；Accession No. 0001156375-20-000079）
+- CME Group Inc. Form 10-Q（Quarter ended 2020-09-30，Filed 2020-11-04；Accession No. 0001156375-20-000119）
+- CME Group Inc. Form 10-Q（Quarter ended 2021-03-31，Filed 2021-05-05；Accession No. 0001156375-21-000052）
+- CME Group Inc. Form 10-Q（Quarter ended 2021-06-30，Filed 2021-08-05；Accession No. 0001156375-21-000093）
+- CME Group Inc. Form 10-Q（Quarter ended 2021-09-30，Filed 2021-11-03；Accession No. 0001156375-21-000167）
+- CME Group Inc. Form 10-Q（Quarter ended 2022-03-31，Filed 2022-05-04；Accession No. 0001156375-22-000158）
+- CME Group Inc. Form 10-Q（Quarter ended 2022-06-30，Filed 2022-08-03；Accession No. 0001156375-22-000215）
+- CME Group Inc. Form 10-Q（Quarter ended 2022-09-30，Filed 2022-11-02；Accession No. 0001156375-22-000312）
+- CME Group Inc. Form 10-Q（Quarter ended 2023-03-31，Filed 2023-05-03；Accession No. 0001156375-23-000066）
+- CME Group Inc. Form 10-Q（Quarter ended 2023-06-30，Filed 2023-08-02；Accession No. 0001156375-23-000129）
+- CME Group Inc. Form 10-Q（Quarter ended 2023-09-30，Filed 2023-11-01；Accession No. 0001156375-23-000190）
+- CME Group Inc. Form 10-Q（Quarter ended 2024-03-31，Filed 2024-05-01；Accession No. 0001156375-24-000072）
+- CME Group Inc. Form 10-Q（Quarter ended 2024-06-30，Filed 2024-08-05；Accession No. 0001156375-24-000149）
+- CME Group Inc. Form 10-Q（Quarter ended 2024-09-30，Filed 2024-11-08；Accession No. 0001156375-24-000200）
 - CME Group Inc. Form 10-Q（Quarter ended 2025-06-30；Accession No. 0001156375-25-000182）
 - CME Group Inc. Form 10-Q（Quarter ended 2025-09-30，Filed 2025-10-24；Accession No. 0001156375-25-000206）
 - CME Group Inc. Form 8-K（Filed 2025-07-25；Accession No. 0001156375-25-000184）
