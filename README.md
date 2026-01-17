@@ -190,11 +190,16 @@ python utils/render.py Reports/<TICKER>/<公司名>全貌梳理.md
 脚本：`utils/fetch_sec_edgar.py`
 
 常用参数：
-- `--ticker`：股票代码（必填）
-- `--form`：表单类型（可多填，如 `10-K 10-Q`）
+- `--ticker`：股票代码（与 `--cik` 互斥，二选一）
+- `--cik`：CIK 数字（与 `--ticker` 互斥，二选一）
+- `--form`：表单类型（必填，可多填，如 `10-K 10-Q`）
 - `--start`：起始日期（必填；支持 YYYY / YYYY-MM / YYYY-MM-DD）
 - `--end`：结束日期（可选；支持 YYYY / YYYY-MM / YYYY-MM-DD；默认今天）
 - `--output`：输出目录（可选，默认 `./filings`）
+- `--user-agent`：覆盖 SEC User-Agent（优先级高于 `SEC_USER_AGENT` 环境变量）
+- `--sleep`：请求间隔秒数（默认 0.2）
+- `--overwrite`：强制覆盖已有文件（默认关闭）
+- `--no-xbrl`：不探测/下载 XBRL 实例与 taxonomy（仅保留主 HTML）
 
 重要说明：
 - SEC 要求 User-Agent 标识身份，请在环境变量中设置：
@@ -215,19 +220,11 @@ python utils/render.py Reports/<TICKER>/<公司名>全貌梳理.md
 - `--sleep`：轮询间隔秒数（默认 30）
 - `--timeout`：轮询超时秒数（默认 1200；实际总超时 = `timeout * 文件数`）
 
-### build_mineru_manifest
-脚本：`utils/build_mineru_manifest.py`
-
-用途：把 MinerU 输出目录（大量文件）构建成可检索的 `manifest.jsonl/manifest.tsv`，供后续按章节选 Top-K chunks。
-
-参数：
-- `--base`：MinerU 输出根目录（例如 `output/0883`）
-- `--output`：索引输出目录（可选；默认 `<base>/index`）
-- `--chunk-chars`：chunk 大小（字符数；默认取环境变量 `MINERU_CHUNK_CHARS`，否则 1800）
-- `--include-doc-records`：在 `manifest.jsonl` 中额外写入 doc 级记录（可选）
-- `--max-docs`：仅处理前 N 份文档（调试用；0 表示不限制）
-- `--write-toc`：生成一个 `toc.md` 骨架（默认开启；仅当 `toc.md` 不存在时写入）
-- `--no-write-toc`：关闭 `toc.md` 生成
+重要说明：
+- MinerU 要求申请API Key，请在环境变量中设置：
+	```bash
+	export MINERU_TOKEN="xxxxxxxxxxxx"
+	```
 
 ### marker_extract
 脚本：`utils/marker_extract.py`
@@ -239,6 +236,36 @@ python utils/render.py Reports/<TICKER>/<公司名>全貌梳理.md
 - `--ollama`：启用本地 Ollama
 - `--model`：Ollama 模型名（默认 `deepseek-r1:8b`）
 
+### build_mineru_manifest
+脚本：`utils/build_mineru_manifest.py`
+
+用途：把 MinerU 输出目录（大量文件）构建成可检索的 `manifest.jsonl/manifest.tsv`，供后续按章节选 Top-K chunks。
+
+参数：
+- `--base`：MinerU 输出根目录（例如 `output/0883`）
+- `--output`：索引输出目录（可选；默认 `<base>/index`）
+#### 以下看不懂可不看
+- `--chunk-chars`：chunk 大小（字符数；默认取环境变量 `MINERU_CHUNK_CHARS`，否则 1800）
+- `--include-doc-records`：在 `manifest.jsonl` 中额外写入 doc 级记录（可选）
+- `--max-docs`：仅处理前 N 份文档（调试用；0 表示不限制）
+- `--write-toc`：生成一个 `toc.md` 骨架（默认开启；仅当 `toc.md` 不存在时写入）
+- `--no-write-toc`：关闭 `toc.md` 生成
+
+### build_marker_manifest
+脚本：`utils/build_marker_manifest.py`
+
+用途：把 Marker 输出目录（大量 JSON）构建成可检索的 `manifest.jsonl/manifest.tsv`，供后续按章节选 Top-K chunks。
+
+参数：
+- `--base`：Marker 输出根目录（例如 `output/0300`）
+- `--output`：索引输出目录（可选；默认 `<base>/index`）
+#### 以下看不懂可不看
+- `--chunk-chars`：chunk 大小（字符数；默认取环境变量 `MARKER_CHUNK_CHARS`，否则 2200）
+- `--include-doc-records`：在 `manifest.jsonl` 中额外写入 doc 级记录（可选）
+- `--max-docs`：仅处理前 N 份文档（调试用；0 表示不限制）
+- `--write-toc`：生成一个 `toc.md` 骨架（默认开启；仅当 `toc.md` 不存在时写入）
+- `--no-write-toc`：关闭 `toc.md` 生成
+
 ### run_qual_report_codex
 脚本：`utils/run_qual_report_codex.py`
 
@@ -246,13 +273,24 @@ python utils/render.py Reports/<TICKER>/<公司名>全貌梳理.md
 - `--base`：材料目录（单一公司；可选，不提供则表示不使用本地材料）
 - `--ticker`：股票代码（可选但推荐；用于默认 base 与校验）
 - `--company`：公司名（可选，覆盖自动识别）
+- `--materials-index`：材料索引目录（包含 manifest.jsonl + toc.md，可选，默认检索`<base>/index`目录）
+- `--manifest-max-items`：材料清单最多列出多少项（默认 6）
+- `--profile`：执行档位（fast/balanced/high/deep，默认balanced）
+- `--max-attempts`：每章最大尝试次数（默认 2，1即关闭稿件审计）
 - `--only-chapters`：只写指定章节（可重复或逗号分隔）
-- `--max-attempts`：每章最大尝试次数（默认 2）
-- `--profile`：执行档位（fast/balanced/high/deep）
+- `--protocol-restate-after`：累计审计失败 N 次后重申硬约束（默认 10）
+- `--write-blocked-max`：`#WRITE`写作失败（非审计失败）的最大次数（默认 10），超出即中断写作
+- `--check/--no-check`：是否执行最终一致性检查（默认开启）
+#### 以下是调试使用
 - `--verbose`：打印 Codex 最终输出
 - `--dry-run`：只打印计划不执行
-- `--overview-input`：overview 输入范围（condensed/full）
-- `--no-check`：关闭最终一致性检查
+- `--dump-prompts`：仅生成 prompts（不调用 Codex）
+- `--dump-prompts-dir`：`--dump-prompts` 输出目录
+#### 以下看不懂可不看
+- `--pack-top-k`：覆盖 toc 中 top_k（0=按 toc）
+- `--pack-neighbor-window`：覆盖 toc 中 neighbor_window（-1=按 toc）
+- `--pack-max-total-chars`：构建材料包时的最大字符数（默认 220000）
+- `--identity-index-top-n`：身份推断时使用的清单/索引条数（默认 12）
 
 ### render
 脚本：`utils/render.py`
